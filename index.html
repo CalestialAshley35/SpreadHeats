@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeadHeats</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>SpreadHeats</h2>
+<div id="toolbar">
+  <button class="toolbar-button" onclick="applyColor()">Color</button>
+  <button class="settings-button" onclick="openSettings()">Settings</button>
+  <button class="html-button" onclick="openHtmlEditor()">HTML</button>
+  <button class="download-button" onclick="downloadSheet()">Download</button>
+</div>
+
+<div id="sheet-container">
+  <table id="sheet" class="sheet">
+    <thead>
+      <tr>
+        <th></th>
+        <!-- Column Headers (A, B, C, ..., Z) -->
+        <script>
+          for (let i = 0; i < 26; i++) document.write(`<th>${String.fromCharCode(65 + i)}</th>`);
+        </script>
+      </tr>
+    </thead>
+    <tbody id="sheet-body">
+      <!-- Rows with numbered headers (1 to 100) -->
+      <script>
+        for (let i = 1; i <= 100; i++) {
+          document.write(`<tr><th>${i}</th>`);
+          for (let j = 0; j < 26; j++) {
+            document.write(`<td contenteditable="true" onclick="selectCell(this)"></td>`);
+          }
+          document.write(`</tr>`);
+        }
+      </script>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal for HTML Editor -->
+<div id="htmlEditorModal">
+  <h3>HTML Editor</h3>
+  <textarea id="htmlCode" placeholder="Write your HTML code here..."></textarea>
+  <button id="saveHtml" onclick="saveHtml()">Save</button>
+  <button id="closeModal" onclick="closeHtmlEditor()">Close</button>
+</div>
+<div id="modalOverlay"></div>
+
+<script src="script.js"></script>
+</body>
+  </html>
