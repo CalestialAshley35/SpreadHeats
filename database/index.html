@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spreadsheet Database</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Spreadsheet Database</h2>
+
+  <label for="dbName">Database Name:</label>
+  <input type="text" id="dbName" placeholder="Enter Database Name">
+  <button onclick="createDatabase()">Create Database</button>
+
+  <div id="databaseContainer" style="display:none;">
+    <h3 id="databaseTitle"></h3>
+    <label for="columnName">Column Name:</label>
+    <input type="text" id="columnName" placeholder="Enter Column Name">
+    <button onclick="addColumn()">Add Column</button>
+
+    <h4>Rows</h4>
+    <label for="rowName">Row Name:</label>
+    <input type="text" id="rowName" placeholder="Enter Row Name">
+    <label for="rowValue">Row Value:</label>
+    <input type="text" id="rowValue" placeholder="Enter Row Value">
+    <button onclick="addRow()">Add Row</button>
+
+    <button onclick="downloadDatabase()">Download Database</button>
+
+    <table id="spreadsheet">
+      <thead>
+        <tr id="columnHeaders"></tr>
+      </thead>
+      <tbody id="rowsData"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
