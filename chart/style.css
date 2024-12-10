@@ -1,0 +1,143 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+/* Container for the chart */
+#chart-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(10px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form and button elements */
+input, button, select {
+    padding: 12px 20px;
+    margin: 12px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+input:focus, button:hover, select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    background-color: #f0f8ff;
+}
+
+/* Input field animation */
+input {
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Button styles */
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Select dropdown styles */
+select {
+    width: 100%;
+    max-width: 350px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Box shadow for interactive elements */
+input, select {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #chart-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+}
+
+/* Light/dark mode toggle (modern feature) */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+body.dark-mode #chart-container {
+    background-color: #1f1f1f;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode input, body.dark-mode button, body.dark-mode select {
+    background-color: #2c2c2c;
+    border-color: #444;
+    color: #f4f4f4;
+}
+
+body.dark-mode input:focus, body.dark-mode button:hover, body.dark-mode select:focus {
+    border-color: #007bff;
+    background-color: #444;
+}
+
+/* Scrollbar styling for sleek look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3;
+}
