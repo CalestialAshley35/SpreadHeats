@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadHeats AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced SpreadHeats AI</h1>
+        <button id="aiButton">Open AI Assistant</button>
+    </header>
+    <main>
+        <div id="promptModal" class="modal">
+            <div class="modalContent">
+                <h3>Enter Command</h3>
+                <input type="text" id="commandInput" placeholder="Type command like 'Put Text in cell A1'">
+                <div class="modalButtons">
+                    <button id="submitCommand">Submit</button>
+                    <button id="closeModal">Cancel</button>
+                </div>
+                <p id="errorMessage" class="errorMessage"></p>
+            </div>
+        </div>
+        <table id="spreadsheet">
+            <thead>
+                <tr>
+                    <th></th>
+                    <script>
+                        for (let i = 0; i < 26; i++) {
+                            document.write(`<th>${String.fromCharCode(65 + i)}</th>`);
+                        }
+                    </script>
+                </tr>
+            </thead>
+            <tbody>
+                <script>
+                    for (let i = 1; i <= 100; i++) {
+                        document.write(`<tr><th>${i}</th>`);
+                        for (let j = 0; j < 26; j++) {
+                            document.write('<td contenteditable="true"></td>');
+                        }
+                        document.write('</tr>');
+                    }
+                </script>
+            </tbody>
+        </table>
+    </main>
+    <script src="script.js"></script>
+</body>
+          </html>
