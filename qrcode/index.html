@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js" defer></script>
+</head>
+<body>
+
+    <h1>Real-Time QR Code Generator</h1>
+    <input type="text" id="text-input" placeholder="Type something..." oninput="generateQRCode()">
+    
+    <div id="qr-code"></div>
+    <a id="download-link" class="download-btn" style="display:none;" href="#" download="qrcode.png">Download QR Code</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
