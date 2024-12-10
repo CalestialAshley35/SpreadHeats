@@ -26,7 +26,8 @@ h2 {
 .database-button, 
 .qr-code-button, 
 .chart-button, 
-.ai-button { 
+.ai-button, 
+.kermit-button { 
   padding: 8px 15px; 
   cursor: pointer; 
   border: none; 
@@ -45,9 +46,20 @@ h2 {
 .database-button:hover, 
 .qr-code-button:hover, 
 .chart-button:hover, 
-.ai-button:hover {
+.ai-button:hover, 
+.kermit-button:hover {
   background-color: #e0e0e0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Kermit button specific style */
+.kermit-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.kermit-button:hover {
+  background-color: #45a049;
 }
 
 /* Spreadsheet styles */
@@ -164,8 +176,9 @@ h2 {
   .database-button, 
   .qr-code-button, 
   .chart-button, 
-  .ai-button {
+  .ai-button, 
+  .kermit-button {
     font-size: 12px;
     padding: 5px 10px;
   }
-  }
+}
