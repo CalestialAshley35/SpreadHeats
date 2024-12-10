@@ -28,7 +28,7 @@ body {
   background-color: #f0f0f0; 
 }
 
-.toolbar-button, .settings-button, .html-button, .download-button, .database-button { 
+.toolbar-button, .settings-button, .html-button, .download-button, .database-button, .qr-code-button { 
   padding: 5px 10px; 
   cursor: pointer; 
   border: none; 
@@ -38,7 +38,7 @@ body {
   color: #000;
 }
 
-.toolbar-button:hover, .settings-button:hover, .html-button:hover, .download-button:hover, .database-button:hover {
+.toolbar-button:hover, .settings-button:hover, .html-button:hover, .download-button:hover, .database-button:hover, .qr-code-button:hover {
   background-color: #e0e0e0;
 }
 
