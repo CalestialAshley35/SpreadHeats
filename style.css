@@ -52,14 +52,14 @@ h2 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Kermit button specific style */
+/* Kermit button style updated to match others */
 .kermit-button {
-  background-color: #4caf50;
-  color: #fff;
+  background-color: #f0f0f0;
+  color: #000;
 }
 
 .kermit-button:hover {
-  background-color: #45a049;
+  background-color: #e0e0e0;
 }
 
 /* Spreadsheet styles */
@@ -181,4 +181,4 @@ h2 {
     font-size: 12px;
     padding: 5px 10px;
   }
-}
+  }
